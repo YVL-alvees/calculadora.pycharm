@@ -1,0 +1,32 @@
+#Função principal
+
+class Calculadora:
+    def __init__(self):
+        self.historico = []
+
+    def somar(self, a, b):
+        resultado = a + b
+        self.historico.append(f"{a} + {b} = {resultado}")
+        return resultado
+
+    def subtrair(self, a, b):
+        resultado = a - b
+        self.historico.append(f"{a} - {b} = {resultado}")
+        return resultado
+
+    def multiplicar(self, a, b):
+        resultado = a * b
+        self.historico.append(f"{a} * {b} = {resultado}")
+        return resultado
+
+    def dividir(self, a, b):
+        if b == 0:
+            return "Erro: Divisão por zero!"
+        resultado = a / b
+        self.historico.append(f"{a} / {b} = {resultado}")
+        return resultado
+
+    def mostrar_historico(self):
+        print("Histórico de Operações:")
+        for operacao in self.historico:
+            print(operacao)
