@@ -30,3 +30,16 @@ class Calculadora:
         print("Histórico de Operações:")
         for operacao in self.historico:
             print(operacao)
+
+
+def main():
+    calc = Calculadora()
+
+    while True:
+        print("\nEscolha a operação:")
+        print("1. Soma")
+        print("2. Subtração")
+        print("3. Multiplicação")
+        print("4. Divisão")
+        print("5. Histórico")
+        print("6. Sair")
